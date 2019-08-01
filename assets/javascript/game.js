@@ -26,16 +26,17 @@ document.onkeyup = function (event) {
         if (userGuess === computerGuess) {
             wins++;
             winsSelector.innerText = wins;
-            left--;
+            left-- > 0;
             leftSelector.innerText = left;
             break
         } else {
             losses++;
             lossesSelector.innerText = losses;
-            left--;
+            left-- > 0;
             leftSelector.innerText = left;
             // soFar.push(computerChoices);
-            soFar.return = userGuess;
+            soFar.text = userGuess;
+            soFarSelector.innerText = soFar;
 
         } if (left === 0) {
             losses++;
