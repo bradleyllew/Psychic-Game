@@ -1,14 +1,14 @@
 
 var winsSelector = document.getElementById('wins');
 var lossesSelector = document.getElementById('loss');
-var leftSelector = document.getElementById('left');
-var soFarSelector = document.getElementById('soFar');
+var leftSelector = document.getElementById('guessesLeft');
+var soFarSelector = document.getElementById('guessesSoFar');
 
-var computerChoices = ['a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z'];
+var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var wins = 0;
-var losses = 0;
-var left = 9;
-var soFar;
+var loss = 0;
+var guessesLeft = 9;
+var guessesSoFar;
 
 
 
@@ -20,30 +20,26 @@ document.onkeyup = function (event) {
     console.log('user guess', userGuess);
     console.log('computer guess', computerGuess);
 
-    for (i = 0; i < 27; i++) {
-        console.log(i);
 
-        if (userGuess === computerGuess) {
-            wins++;
-            winsSelector.innerText = wins;
-            left-- > 0;
-            leftSelector.innerText = left;
-            break
-        } else {
-            losses++;
-            lossesSelector.innerText = losses;
-            left-- > 0;
-            leftSelector.innerText = left;
-            // soFar.push(computerChoices);
-            soFar.text = userGuess;
-            soFarSelector.innerText = soFar;
 
-        } if (left === 0) {
-            losses++;
-            lossesSelector.innerText = losses;
-            left = 9;
-            leftSelector.innerText = left;
-        };
+    if ((userGuess === computerChoices) && (guessesLeft > 0)) {
+        wins++;
+        winsSelector.innerText = wins;
+        leftSelector === 9;
+    } else {
+        guessesLeft--;
+        leftSelector.innerText = guessesLeft;
 
+    } if (guessesLeft === 0) {
+        lossesSelector++;
+        soFarSelector === 0;
     };
+
+
+
+
+
+
+
 }
+
