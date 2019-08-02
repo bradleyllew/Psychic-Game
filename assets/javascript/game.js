@@ -31,8 +31,9 @@ document.onkeyup = function (event) {
         leftSelector.innerText = guessesLeft;
 
     } if (guessesLeft === 0) {
-        lossesSelector++;
-        soFarSelector === 0;
+        loss++;
+        lossesSelector.innerText = loss;
+        guessesSoFar.innerText === 0;
     };
 
 
