@@ -20,7 +20,15 @@ document.onkeyup = function (event) {
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     console.log('user guess', userGuess);
     console.log('computer guess', computerGuess);
-    
+
+
+
+
+    if (guessesLeft === 0) {
+        loss++;
+        lossesSelector.innerText = loss;
+        soFarSelector.innerText = userGuess;
+    };
 
 
 
@@ -34,13 +42,6 @@ document.onkeyup = function (event) {
         guessesLeft--;
         leftSelector.innerText = guessesLeft;
         soFarSelector.innerText = userGuess;
-
-    } if (guessesLeft === 0) {
-        loss++;
-        lossesSelector.innerText = loss;
-        soFarSelector.innerText = userGuess;
-
-
     };
 
 
