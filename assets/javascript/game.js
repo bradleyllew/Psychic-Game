@@ -46,15 +46,7 @@ document.onkeyup = function (event) {
         leftSelector.innerText = guessesLeft;
         guessesSoFar.push(userGuess);
         console.log('guesses so far', guessesSoFar);
-        
         soFarSelector.innerText = guessesSoFar;
     };
-
-
-
-
-
-
-
 }
 
