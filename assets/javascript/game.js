@@ -33,11 +33,12 @@ document.onkeyup = function (event) {
     } else {
         guessesLeft--;
         leftSelector.innerText = guessesLeft;
+        soFarSelector.innerText = userGuess;
 
     } if (guessesLeft === 0) {
         loss++;
         lossesSelector.innerText = loss;
-        guessesSoFar.innerText = userGuess;
+        soFarSelector.innerText = userGuess;
 
 
     };
