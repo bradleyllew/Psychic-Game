@@ -8,7 +8,7 @@ var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 var wins = 0;
 var loss = 0;
 var guessesLeft = 9;
-var guessesSoFar;
+var guessesSoFar =[];
 
 
 
@@ -27,7 +27,10 @@ document.onkeyup = function (event) {
     if (guessesLeft === 0) {
         loss++;
         lossesSelector.innerText = loss;
-        soFarSelector.innerText = userGuess;
+        guessesLeft = 9;
+        leftSelector.innerText = guessesLeft;
+        guessesSoFar.length = 0;
+        // soFarSelector.innerText = ;
     };
 
 
@@ -41,7 +44,10 @@ document.onkeyup = function (event) {
     } else {
         guessesLeft--;
         leftSelector.innerText = guessesLeft;
-        soFarSelector.innerText = userGuess;
+        guessesSoFar.push(userGuess);
+        console.log('guesses so far', guessesSoFar);
+        
+        soFarSelector.innerText = guessesSoFar;
     };
 
 
