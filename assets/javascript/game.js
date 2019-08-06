@@ -24,29 +24,38 @@ document.onkeyup = function (event) {
 
 
 
-    if (guessesLeft === 0) {
-        loss++;
-        lossesSelector.innerText = loss;
-        guessesLeft = 9;
-        leftSelector.innerText = guessesLeft;
-        guessesSoFar.length = 0;
-        // soFarSelector.innerText = ;
-    };
-
+    
 
 
     if (userGuess === computerGuess) {
         wins++;
-        winsSelector.innerText = wins;
+        // winsSelector.innerText = wins;
         leftSelector.innerText = 9;
 
 
     } else {
         guessesLeft--;
-        leftSelector.innerText = guessesLeft;
+        // leftSelector.innerText = guessesLeft;
         guessesSoFar.push(userGuess);
         console.log('guesses so far', guessesSoFar);
-        soFarSelector.innerText = guessesSoFar;
+        // soFarSelector.innerText = guessesSoFar;
     };
+
+    if (guessesLeft === 0) {
+        loss++;
+        // lossesSelector.innerText = loss;
+        guessesLeft = 9;
+        // leftSelector.innerText = guessesLeft;
+        guessesSoFar.length = 0;
+        
+    };
+
+
+    winsSelector.innerText = wins;
+    lossesSelector.innerText = loss;
+    soFarSelector.innerText = guessesSoFar.join(" ");
+    leftSelector.innerText = guessesLeft;
+
+
 }
 
